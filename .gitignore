@@ -1,2 +1,57 @@
-.venv
-venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Flask instance folder
+instance/
+
+# Flask logs
+*.log
+logs/
+
+# Local environment files
+.env
+*.env
+
+# Testing cache
+.pytest_cache/
+.tox/
+coverage.xml
+htmlcov/
+
+# Database files
+*.sqlite3
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Packaging files
+*.egg-info/
+dist/
+build/
+
+# Migrations (if using Flask-Migrate / Alembic)
+migrations/
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
