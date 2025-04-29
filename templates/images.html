@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+  </head>
+  <body>
+    <h1>Images (Woohoo!)</h1>
+    <p>Images use a void element. The void element in question is: &ltimg&gt. By assigning an image in the <em>src</em> attribute, either using a relative or an absolute link, we can straight up render an image.</p>
+    <h2>Using absolute links</h2>
+    <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project's logo">
+    <h2>Using relative links</h2>
+    <img src="/static/img/DSC05068.JPG" alt="my two dogs, Simon in the background and Reina in the foreground">
+    <p>Accessing the parent directory should be as easy as prepending a double dot '..' to the file search. Nevertheless, given how Flask manages static resources, I don't know if that would be something useful for <em>this specific use case</em></p>
+    <p>It is important to add the <em>alt</em> attribute in the images. This is important for two reasons:</p>
+    <ol>
+      <li>If the resource (the image) is not available, you'll be able to at least show that <em>alt</em> text.</li>
+      <li>If someone that is vision impaired is using a screen-reader, the image will be represented by the string that you store in the <em>alt</em> attribute.</li>
+    </ol>
+  </body>
+  <footer>
+    <small>Date of creation: April 28, 2025 at 18:06:13 UTC+2</small>
+    <small>Last updated: {{ last_updated }}</small>
+  </footer>
+</html>

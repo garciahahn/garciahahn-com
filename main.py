@@ -61,6 +61,14 @@ def show_learning_webdev():
 def show_learning_webdev_text():
     return render_template('text.html', last_updated=LAST_UPDATED)
 
-@app.route('/self-learning-webdev/link-and-images')
-def show_learning_webdev_links_and_images():
-    return render_template('links_and_images.html', last_updated=LAST_UPDATED)
+@app.route('/self-learning-webdev/links')
+def show_learning_webdev_links():
+    return render_template('links.html', last_updated=LAST_UPDATED)
+
+@app.route('/self-learning-webdev/pages/about')
+def show_learning_webdev_notabout():
+    return render_template('notabout.html', last_updated=LAST_UPDATED)
+
+@app.route('/self-learning-webdev/images')
+def show_learning_webdev_images():
+    return render_template('images.html', last_updated=LAST_UPDATED)

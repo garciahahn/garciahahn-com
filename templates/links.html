@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Self-taught - Links and Zel...</title>
+  </head>
+  <body>
+    
+    <h1>Homepage (practice)</h1>
+    <p><a>This is an anchor</a>. It is defined by using the &lta&gt tag. By itself it doesn't do anything. Go, try it.</p>
+    <p>To send you anywhere using an anchor I need to use an <em>attribute</em> within the tag I'm defining. This attribute is the <em>href</em> attribute (from hypertext-reference, <i>most probably</i>).</p>
+
+    <p>I can add any reference I want within the anchor. We will chose a reference to the site used to learn these skills. That'd be <a href="https://www.theodinproject.com">The Odin Project</a>. This hypertext referencing, is important to say, is what makes the web, <em>the web</em>. That is a web of links that reference each other and we can access.</p>
+    <p>Previous link I used, sorry, <em>anchor</em> is somewhat annoying to click. If you do, it will open the webpage on the same tab/windows you're using to read this. To avoid doing that, the best option is to configure another attribute of the anchor tag: the <em>target</em>.</p>
+    <p>That, would make <a href="https://www.theodinproject.com" target="_blank" rel="noopener noreferrer">this link here</a> to open in a new tab. We added another attribute in the previous tag: <em>rel</em>. We set it up to the string "noopener noreferrer". <em>noopener</em> will stop any javascript execution that the visiting page could exert on the referring page. <em>noreferrer</em> will include this behavior plus privacy. By using <em>noreferrer</em> the visited page will not know where we came from when clicking into the link.</p>
+    
+    <h2>Absolute and Relative Links</h2>
+    <p>Absolute links have an scheme followed by a domain. This will usually be in the format of: scheme://domain/path/inside/the/domain.</p>
+    <p>Relative links will only have a relative path. For example, if I use the value "text" into <a href="text" target="_blank">this link</a>, it will take you to the page where I practiced text and text formatting in HTML.</p>
+    <p>Pages shouldn't be thrown all in the same folders. They should be, hopefully, ordered categorically. Imagine I want to access a page at "https://garciahahn.com/self-learning-webdev/pages/about", for that, I only need to add "pages/about" to my href attribute. In The Odin Project, they do this the old way by serving files directly. I'm doing this using Flask routing, so, it will look a little bit different from that tutorial (mostly because I lack the ".html" extension), and because the route hierarchy does not necessarily reflect how the files are stored. Oh, yeah, I almost forgot <a href="pages/about" target="_blank">to actually implement the example</a>.</p>
+    <footer>
+      <small>Last updated: {{ last_updated }}</small>
+  </footer>
+  </body>
+</html>
