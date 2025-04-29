@@ -72,3 +72,7 @@ def show_learning_webdev_notabout():
 @app.route('/self-learning-webdev/images')
 def show_learning_webdev_images():
     return render_template('images.html', last_updated=LAST_UPDATED)
+
+@app.route('/self-learning-webdev/css-intro')
+def show_learning_webdev_css_intro():
+    return render_template('css_intro.html', last_updated=LAST_UPDATED)
