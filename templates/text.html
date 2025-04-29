@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Self-taught - Handling text in HTML</title>
+  </head>
+  <body>
+    <p><b><big>NOTE:</big></b> Since I'm learning, all this code will be very rough and raw. To check the source for the code you can just press F12 or the respective dev-tools for your browser.</p>
+    Even though someone would expect for this text to be on one line.
+
+    And this other text to be in another line, it does not work like that with HTML. Surprisingly, we need to divide these types of text in different elements.
+
+    <p>To correct this, in html, we need to use paragraphs.</p>
+    <p>Like this, in this manner, these different texts would be separated into different paragraphs. All by using the tag &ltp&gt.</p>
+    <p>I suspect that, for only starting a new line we need to use a "break"<br>In this manner. I continue writing down here. That expression is &ltbr&gt.</p>
+
+    <h1>At this point headings are self explained</h1>
+    <h2>For some reason HTML decided that 6 levels for them were enough</h2>
+    <h3>Why? Only God knows. It could have been 5</h3>
+    <h4>It could have been 7</h4>
+    <h5>It could have gotten atomically smaller until you cannot read them anymore</h5>
+    <h6>Like, look at this. This is smaller than regular text. What is this, a heading for ants?</h6>
+
+    You defined by using the &lthX&gt tag, where X goes from 1 to 6.
+
+    <h1><strong>Strong</strong> and <em>Emphasized</em> text</h1>
+    See? I used the heading. Strong and emphasized (&ltstrong&gt and &ltem&gt) are the steroid versions of bold and italic. It does not only set the font to bold and italic, respectively, but it also affects how screen readers read the text. Or so they say. Haven't tried myself.
+
+    <!-- This will not be rendered, but I believe that this can inspected in the webdev tool. Anyhow, this is how you make a comment in HTML. It's not pretty if you ask me. -->
+    <p>Oh, another fancy tool. In vscode you can type "lorem" and vscode <i>should</i> give you lorem ipsum text. Let's try it</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet qui ipsam incidunt saepe accusamus dolorum voluptate, nobis facere asperiores tenetur nisi excepturi necessitatibus a quibusdam minima reiciendis porro, officiis laudantium?</p>
+
+    <p>It worked :D</p>
+
+    <h1>Lists</h1>
+    <h2>Unordered lists</h2>
+    <p>See see! <em>I used the second heading level!</em></p>
+    <p>Unordered lists (lists in general) are stupid easy. You just need to ask yourself <em>Does order matter?</em>. If no, you're in the right place: <strong>unordered lists</strong> are for you.</p>
+    <p>You only need to create a HTML element with &ltul&gt and then set the individual items with &ltli&gt. <strong>500 IQ trick</strong>: <em>li</em> comes from "list item". <em>Voilà!</em> You'll never forget it.</p>
+    <ul>
+      <li>
+        This is one item
+      </li>
+      <li>This can be another item</li>
+      <li>Inspect these elements. It could be useful to see how it is written</li>
+    </ul>
+
+    <h2>Ordered lists</h2>
+    <p>If the answer to the question <em>Does order matter?</em> was yes, then ordered lists are your bread and butter. As its name suggests it, you create them using the HTML tag &ltol&gt</p>
+    <ol>
+      <li>First element</li>
+      <li>Second element</li>
+      <li>Third element</li>
+      <li>Fifth element</li>
+      <li>...</li>
+      <li>Wait no...</li>
+      <li>That was like the fourth, right?</li>
+      <li>And this is the... I'm not counting them</li>
+      <li>But since they are numbered :) you can look at the number to the left</li>
+    </ol>
+  <footer>
+      <small>Last updated: {{ last_updated }}</small>
+  </footer>
+  </body>
+</html>

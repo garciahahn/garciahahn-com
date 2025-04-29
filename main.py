@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, render_template, request
 import logging
 import os
@@ -8,6 +9,15 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(message)s"
 )
+
+now = datetime.now().astimezone()
+
+dt_str = now.strftime("%B %d, %Y at %H:%M:%S")
+offset_hours = int(now.utcoffset().total_seconds() // 3600)
+offset_str = f"UTC{offset_hours:+d}"
+
+LAST_UPDATED = dt_str + ' ' + offset_str
+
 app = Flask(__name__)
 
 # This is how variable converters work:
@@ -41,8 +51,16 @@ def show_main_page():
         "=============================\n"
     )
     logging.info(log_message)
-    return render_template('index.html')
+    return render_template('index.html', last_updated=LAST_UPDATED)
 
 @app.route('/self-learning-webdev')
 def show_learning_webdev():
-    return render_template('webdev.html')
+    return render_template('webdev.html', last_updated=LAST_UPDATED)
+
+@app.route('/self-learning-webdev/text')
+def show_learning_webdev_text():
+    return render_template('text.html', last_updated=LAST_UPDATED)
+
+@app.route('/self-learning-webdev/link-and-images')
+def show_learning_webdev_links_and_images():
+    return render_template('links_and_images.html', last_updated=LAST_UPDATED)
